@@ -199,19 +199,8 @@
                         <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div class="navbar-nav ms-auto mx-xl-auto p-0">
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle"
-                                        data-toggle="dropdown">{{ app()->getLocale() == 'bn' ? __('পার্টি') : __('Party') }}</a>
-                                    <div class="dropdown-menu">
-                                        <a href="{{ route('abouts') }}"
-                                            class="dropdown-item">{{ app()->getLocale() == 'bn' ? __('পরিচিতি') : __('About-Us') }}</a>
-                                        {{-- <a href="{{ route('partyMembers') }}" class="dropdown-item">{{ app()->getLocale() == 'bn' ? __('দলীয় সদস্য') : __('Party Members') }}</a> --}}
-                                        <a href="{{ route('party') }}"
-                                            class="dropdown-item">{{ app()->getLocale() == 'bn' ? __('নেতৃবৃন্দ') : __('Our Leaders') }}</a>
-                                        <a href="{{ route('associate') }}"
-                                            class="dropdown-item">{{ app()->getLocale() == 'bn' ? __('সহযোগী সংগঠন') : __('Associated organization') }}</a>
-                                        <a href="{{ route('affiliate') }}"
-                                            class="dropdown-item">{{ app()->getLocale() == 'bn' ? __('অঙ্গ সংগঠন') : __('Affiliate Organization') }}</a>
-                                    </div>
+
+
                                 </li>
 
                                 <a href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact') }}</a>
