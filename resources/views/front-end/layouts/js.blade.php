@@ -69,3 +69,30 @@
 
 
 </script>
+
+
+
+
+<script>
+
+console.log($);
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100){
+    sticky.addClass('fixed-top');
+    sticky.removeClass('padding-fix');
+    $('.logo').addClass('logo-scroll');
+
+  }
+  else {
+    sticky.removeClass('fixed-top');
+
+    sticky.addClass('padding-fix');
+    $('.logo').removeClass('logo-scroll');
+  }
+});
+
+</script>
+
