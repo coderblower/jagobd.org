@@ -1,7 +1,7 @@
 <!-- Footer Start -->
 <div class="container-fluid footer bg-dark">
     <div class="container pt-4 pb-3">
-        <div class="row py-4" >
+        {{-- <div class="row py-4" >
             <div class="col-md-5">
                 @if ($siteSetting)
                     <a href="{{ route('frontend.index') }}" class="navbar-brand d-flex align-items-center">
@@ -89,12 +89,13 @@
                     @endif
                 </p>
             </div>
-        </div>
+        </div> --}}
         <hr class="text-light mt-3 mb-3">
         <div class="row">
             <div class="col-md-6 text-center text-md-start">
                 <span class="text-light">© @if ($siteSetting)
-                        {{ $siteSetting->site_name_en }}
+                        {{-- {{ $siteSetting->site_name_en }} --}}
+                        JAGO JANATA
                     @else
                         Your Company
                     @endif. All rights reserved.</span>
