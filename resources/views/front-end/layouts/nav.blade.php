@@ -203,30 +203,66 @@
 
     </div>
 
-    <div class="container-fluid" style="background:#008C87">
+
+
+    <style>
+
+        .main-nav{
+            position: relative;
+        }
+
+        .main-nav::after {
+            content: "";
+            height: 10px;
+            width: 100%;
+            top:0;
+            left:0;
+            background:green;
+            position: absolute;
+
+        }
+
+        .nav-link-text {
+            font-family: 'myfont';
+            color: rgb(19, 19, 19);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+    </style>
+
+    <div class="container-fluid main-nav" style="background:#f5f5f5">
         <div class="container">
             <div class="row">
-                <div class=" col-md-3 mx-auto ">
+                <div class=" col-md-10 mx-auto ">
                     <nav class="navbar navbar-light navbar-expand-lg " style=" ">
-
-
-
 
                         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"> </span>
                         </button>
+
                         <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div class="navbar-nav ms-auto mx-xl-auto p-0">
-                                <li class="nav-item dropdown">
+                                <ul class="d-flex justify-content-center gap-4" style="list-style: none">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact') }}</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('সংস্কারের ক্ষেত্র') : __('Reform Area') }}</a>
+                                    </li>
+                                    <li><a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের দফা') : __('Our Agenda') }}</a></li>
+                                    <li>
+                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('রোডম্যাপ') : __('RoadMap') }}</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact us') }}</a>
+                                    </li>
+                                </ul>
 
-
-                                </li>
-
-                                <a href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact') }}</a>
 
                             </div>
-
+                        </div>
                     </nav>
                 </div>
 
