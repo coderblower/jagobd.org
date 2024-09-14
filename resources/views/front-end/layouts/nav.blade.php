@@ -131,11 +131,30 @@
         </div>
     </div>
 
+    <style>
+      .outer {display: flex; flex-wrap: wrap}
+
+        .inner {
+        flex: 1;
+        /* height: 200px; */
+        width: 200px;
+        margin: 0 5px;
+        /* background: blue; */
+        }
+
+        @media (max-width: 480px) {
+            .inner {
+                flex: 0 1; /* - 2 x 5px left & right margin */
+                /* width: 100px; */
+            }
+        }
+    </style>
+
     <div class="container">
 
 
         <div class="row">
-            <div class="col-md-8 mx-auto py-2">
+            <div class="col-md-8 col-sm- mx-auto py-2">
                 <div class="d-flex justify-content-between align-items-center">
                     {{-- logo --}}
 
@@ -146,12 +165,13 @@
                         </a>
                       </div>
 
-                      <div class="sub-text d-flex justify-content-center gap-4 mt-4">
-                          <div>সংস্কার</div>
-                          <div>জাতীয়তাবাদ</div>
-                          <div>ইনসাফ</div>
-                          <div>প্রযুক্তি ও প্রগতি</div>
+                      <div class="sub-text d-flex flex-wrap justify-content-center gap-md-4">
+                          <div class="inner" style="flex-basis: max-content">সংস্কার</div>
+                          <div class="inner" style="flex-basis: max-content">জাতীয়তাবাদ</div>
+                          <div class="inner" style="flex-basis: max-content">ইনসাফ</div>
+                          <div class="inner" style="flex-basis: max-content">প্রযুক্তি ও প্রগতি</div>
                       </div>
+
 
 
 
@@ -161,7 +181,7 @@
               </div>
             </div>
 
-            <div class="offset-md-1 col-md-3 d-flex justify-content-around align-items-center">
+            <div class=" col-md-3 d-flex justify-content-around align-items-center">
                 <div class=" d-flex hightech-link justify-content-start align-items-center">
                     <div class="">
                         @if ($siteSetting)

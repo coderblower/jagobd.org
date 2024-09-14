@@ -22,3 +22,12 @@
 <!-- Toastr -->
 <link rel="stylesheet" href="{{ asset('backend/plugins/toastr/toastr.min.css') }}">
 
+<style>
+
+@font-face {
+    font-family: myfont;
+    src:url({{asset('frontend/font/myfont.ttf')}});
+}
+
+</style>
+

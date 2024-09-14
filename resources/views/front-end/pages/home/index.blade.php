@@ -11,6 +11,17 @@
 
 
    <style>
+
+    .common-section-title {
+        text-align: center;
+        color: rgb(5 104 57);
+        font-weight: bold;
+        font-family: 'myfont';
+        padding: 45px 0;
+        letter-spacing: 3px;
+        font-size: 3em;
+    }
+
     .cart{
         width:400px;
         background:#008C87;
@@ -83,10 +94,11 @@
     }
 
    .custom-card h3{
-        font-size: 24px;
-        padding: 0 12px;
-        text-align: justify;
-        line-height: 35px
+        font-size: 19px;
+        padding: 0 24px;
+        text-align: start;
+        line-height: 26px;
+        margin-top: 23px;
     }
 
     .amader-kotha p {
@@ -99,7 +111,7 @@
     <div class="container-fluid">
         <div class="row" style="height: 100vh; overflow:hidden;">
             <div class="col-md-3 text-center amader-kotha-title d-flex justify-content-center align-items-center " style="">
-                <h2 style="color:rgb(34, 34, 34); font-size:40px; ">
+                <h2 class="common-section-title" style="">
                     আমাদের কথা
 
                  </h2>
@@ -145,97 +157,173 @@
 
 
 
-   {{-- 350 deg secton start --}}
 
+      <style>
+        .deg-card{
+            width:25rem;
+        }
+      </style>
 
-   <section>
-       <div class="container-fluid">
-           <div class="row">
+      <section>
+        <div class="360-area " style="    background: #c1ddc7;">
+            <div class="container py-5">
 
-            <div class=" offset-md-1 col-md-5 reform-title text-center d-flex px-4 justify-content-center align-items-center " style="background:rgb(255, 255, 255)">
-                <h2 style="color:rgb(15, 14, 14); font-size:40px; ">
-                    360 ডিগ্রী <br> সংস্কারের ক্ষেত্রসমূহ
-
-                 </h2>
-             </div>
-
-                <div class="col-md-6 text-center d-flex flex-column  align-items-center" style="height: 100vh d-flex justify-content-center item-aligns-center">
-                    <div class="cart">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, alias?</p>
-                    </div>
-                    <div class="cart">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, alias?</p>
-                    </div>
-                    <div class="cart">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, alias?</p>
-                    </div>
-                    <div class="cart">
-                        <img src="" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, alias?</p>
+                <div class="row">
+                    <div class="heading-deg  text-center" >
+                        <h2 style="" class="common-section-title"> ৩৬০° সংস্কারের
+                             ক্ষেত্রসমূহ
+                            </h2>
                     </div>
                 </div>
 
+                <div class="row" style="margin-top:40px;">
+                    <div class="col-md-6 gap d-flex justify-content-end">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
+                    <div class=" col-md-6 gap d-flex justify-content-start">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="" >
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:40px;">
+                    <div class=" col-md-6 gap d-flex justify-content-center">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
+                    <div class=" col-md-6 gap d-flex justify-content-center">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="" >
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:40px;">
+                    <div class=" col-md-6 gap d-flex justify-content-end">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
+                    <div class=" col-md-6 gap d-flex justify-content-start">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
+                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                         </div>
+                    </div>
 
+                </div>
+
+
+
+                </div>
             </div>
         </div>
     </section>
 
 
-
     @include('front-end.pages.home.components.fancy_button')
 
 
-    <section style="background:#008c8785">
+    <style>
 
-        <div class="container-fluid">
+        .dofa {position: relative;}
+        .dofa::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top:0;
+            /* z-index: 2; */
+          background:rgb(100 100 100 / 94%);
+        };
+
+        .dofa-rofa{
+            position: relative;
+            z-index: 999;
+        }
+
+        .dofa span {
+            color: rgb(255 255 255);
+            font-weight: bold;
+            font-family: 'myfont';
+        }
+
+        .card-1{
+            background: #ffff86;
+        }
+        .card-2 {
+            background:#31c9e9
+        }
+    </style>
+
+    <section class="dofa" style="background:url('{{asset('frontend/img/dofa-bg.png')}}')">
+
+        <div class="dofa-rofa container-fluid" style="position: relative; z-index:1">
 
             <div class="row">
                 <div class="col-auto mx-auto">
-                    <h2 class="text-center py-5">  জাগো জনতার দফাসমূহ</h2>
+                    <h2 class="text-center common-section-title py-5" style="color:rgb(255, 255, 255)">  জাগো জনতার দফাসমূহ</h2>
                 </div>
             </div>
 
             <div class="row justify-content-center mb-5">
                 <!-- First row of 3 cards -->
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div><h3>প্রবাসীদের অধিকার সংস্কারে</h3>
+                    <div class=" custom-card card-1">
+                        <div class="d-flex justify-content-center flex-column  align-items-center">
+                        <img src="{{asset('frontend/img/dofa-img-1.png')}}" style="width:49%" alt="">
+                        <h3>প্রবাসীদের অধিকার সংস্কারে</h3>
                         <span>১৭ দফা</span></div>
                     </div>
                 </div>
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div> <h3>ভারতের সাথে সম্পর্কের পুনঃবিন্যাস ও সংস্কারে</h3>
+                    <div class="custom-card card-2">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                        <img src="{{asset('frontend/img/dofa-img-2.png')}}" style="width:45%" alt="">
+                        <h3>ভারতের সাথে সম্পর্কের পুনঃবিন্যাস ও সংস্কারে</h3>
                         <span>১২ দফা</span></div>
                     </div>
                 </div>
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div> <h3>৪র্থ শিল্প বিপ্লবে বাংলাদেশের অংশগ্রহণ ও এগিয়ে যাওয়ার</h3>
+                    <div class="custom-card card-1">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="{{asset('frontend/img/dofa-img-3.png')}}" style="width:70%" alt="">
+                            <h3>৪র্থ শিল্প বিপ্লবে বাংলাদেশের অংশগ্রহণ ও এগিয়ে যাওয়ার</h3>
                             <span>১১ দফা</span></div>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center mb-5 pb-5">
+            <div class="row justify-content-center  pb-5">
                 <!-- Second row of 3 cards -->
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div> <h3>ব্লু ইকোনোমি সুনীল অর্থনীতিতে বাংলাদেশের সম্পৃক্ততা নিশ্চিতে</h3>
+                    <div class="custom-card card-2">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="{{asset('frontend/img/dofa-img-4.png')}}" style="width:65%" alt="">
+                        <h3>ব্লু ইকোনোমি সুনীল অর্থনীতিতে বাংলাদেশের সম্পৃক্ততা নিশ্চিতে</h3>
                         <span>১০ দফা</span></div></div>
                 </div>
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div> <h3>জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিতে</h3>
+                    <div class="custom-card card-1">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="{{asset('frontend/img/dofa-img-5.png')}}" style="width:70%" alt="">
+                            <h3>জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিতে</h3>
                             <span>৭ দফা</span></div>
                     </div>
                 </div>
                 <div class="col-auto">
-                    <div class="custom-card">
-                        <div> <h3>মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারে</h3>
+                    <div class="custom-card card-2">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <img src="{{asset('frontend/img/dofa-img-6.png')}}" style="width:66%" alt="">
+                            <h3>মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারে</h3>
                             <span>১২ দফা</span></div>
                     </div>
                 </div>
@@ -270,7 +358,7 @@
     <!-- party End -->
 
     <!-- Contact Start -->
-    {{-- @include('front-end.pages.home.components.contact') --}}
+    @include('front-end.pages.home.components.contact')
     <!-- Contact End -->
 @endsection
 @section('js')

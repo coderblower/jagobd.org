@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(183 171 113 / 70%); /* This adds a dark overlay to make text more readable */
+    background: rgb(248 255 210 / 81%);/* This adds a dark overlay to make text more readable */
     z-index: 1;
     }
 
@@ -88,7 +88,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgb(0 0 255/ 70%);
+    background: rgb(248 255 210 / 81%);
     /* z-index: 8888; */
 }
 
@@ -104,7 +104,7 @@
         <div class="row">
             <div class="container join-us-content">
                 <div class="row mb-2 mt-4">
-                    <h2 style="text-align: center; color:rgb(255, 251, 13); font-weight:bold" class=""> সংস্কার বাস্তবায়নে যোগ দিন </h2>
+                    <h2  class="common-section-title"> সংস্কার বাস্তবায়নে যোগ দিন </h2>
                 </div>
                 <div class="row">
                    <div class="col-md-12 mx-auto">

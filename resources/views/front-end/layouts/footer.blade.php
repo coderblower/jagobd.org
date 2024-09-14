@@ -1,8 +1,21 @@
+
+
+<div class=" d-flex justify-content-center align-items-center">
+    <img src="{{asset('frontend/img/banner-footer.jpg.png')}}" style="min-width:100%" alt="">
+</div>
+
+
+
+
 <!-- Footer Start -->
-<div class="container-fluid footer bg-dark">
+
+
+
+
+<div class=" footer bg-dark">
     <div class="container pt-4 pb-3">
-        {{-- <div class="row py-4" >
-            <div class="col-md-5">
+        <div class="row py-4" >
+            {{-- <div class="col-md-5">
                 @if ($siteSetting)
                     <a href="{{ route('frontend.index') }}" class="navbar-brand d-flex align-items-center">
                         <img src="{{ asset('frontend/img/BNMLogo.png') }}" class="img-fluid" alt="Logo"
@@ -88,8 +101,8 @@
                         No data available.
                     @endif
                 </p>
-            </div>
-        </div> --}}
+            </div> --}}
+        </div>
         <hr class="text-light mt-3 mb-3">
         <div class="row">
             <div class="col-md-6 text-center text-md-start">

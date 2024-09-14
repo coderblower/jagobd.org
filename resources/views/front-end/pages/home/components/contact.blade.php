@@ -68,7 +68,7 @@
 
 
 
-<div class="map-area py-5">
+{{-- <div class="map-area py-5">
 
     <div class="container">
 
@@ -141,7 +141,7 @@
 
         </div>
     </div>
-</div>
+</div> --}}
 
 
 <style>
