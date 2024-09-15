@@ -48,7 +48,7 @@
         width: 5px;
         position: relative;
         right: -60px;
-        top: 0;
+        top: 84px;
         background: rgb(12, 187, 120);
     }
 
@@ -109,26 +109,27 @@
 
 <section style="padding: 30px 0">
     <div class="container-fluid">
-        <div class="row" style="height: 100vh; overflow:hidden;">
-            <div class="col-md-3 text-center amader-kotha-title d-flex justify-content-center align-items-center " style="">
-                <h2 class="common-section-title" style="">
-                    আমাদের কথা
-
-                 </h2>
+        <div class="row" style="">
+            <div class="col-md-5 text-center amader-kotha-title d-flex justify-content-center align-items-center " style="">
+                <img src="{{asset('frontend/img/banner-main-1.jpg')}}" alt="" style="max-width: 70%">
              </div>
-             <div class="col-md-9 text-center d-flex justify-content-center  " style="height: 100vh;">
+             <div class="col-md-7 text-center d-flex justify-content-center  " style="">
                  <div class="amader-kotha d-flex justify-content-around flex-column text-justify" style="padding:40px 20px;">
+
+                    <h2 class="common-section-title" style="">
+                        আমাদের কথা
+
+                     </h2>
+
                     <div>
                         <p class="" style="text-align: justify">
                             <span style="font-weight: bold; color:black">স্বাধীনতার পরবর্তী সবচেয়ে বড় গণঅভ্যুত্থান ২০২৪</span> সালের বৈষম্য বিরোধী ছাত্র-জনতার আন্দোলন। এই আন্দোলনের ভাষা, বিপ্লবের বাক্য বিন্যাস এবং মিছিলের স্লোগান এখন শহরের দেয়ালে দেয়ালে আর মানুষের মনের খেয়ালে খেয়ালে। বাংলাদেশের ইতিহাস ঘেঁটে দেখা যায়, এই মুল্লুকে যে কয়টি গণঅভ্যুত্থান হয়েছে; প্রায় সবকটিতেই ছাত্র-জনতার অংশগ্রহণের প্রভাব ছিল সুদূরপ্রসারী। বেশিরভাগ অভ্যুত্থানের শুরুতে ছাত্রদের শান্তিপূর্ণ দাবিকে শাসকরা তোয়াক্কা না করা ডেকে নিয়েছে তাদের পতন, আর জন্ম নিয়েছে ইতিহাসের নতুন নতুন অধ্যায়।
                         </p>
-                    </div>
-                    <div>
+
                         <p class="" style="text-align: justify">
                             ইতিহাসের এই সন্ধিক্ষণে রাজনৈতিক পট পরিবর্তন খুবই স্বাভাবিক ও প্রাসঙ্গিক। এমতাবস্থায় প্রতিশ্রুতিশীল ও দেশপ্রেমী জনতা, প্রবাসী ও তারুণ্যের সমন্বয়ে গঠিত নতুন ধারার রাজনৈতিক সংগঠন হিসেবে আত্মপ্রকাশ করা এবং দেশের উন্নয়নের লক্ষ্যে সংস্কার কার্যক্রম জারী রাখাটা সময়ের দাবী। এই লক্ষ্যে আমাদের নানাবিধ কার্যক্রম ও পরিকল্পনার সমন্বিত অবস্থার রূপায়নই হলো <span style="color:red; font-weight:bold"> “জাগো জনতা”</span>।
                         </p>
-                    </div>
-                    <div>
+
                         <p class="" style="text-align: justify">
                            <span style="color:red; font-weight:bold"> “জাগো জনতা”</span> ছড়িয়ে যাবে দেশের প্রতিটি অঞ্চলে, শহর থেকে গ্রামে, গ্রাম থেকে আবাল-বৃদ্ধ-বনিতার কাছে। আমরা জেলা শহর, দেশের সরকারি-বেসরকারি বিশ্ববিদ্যালয়, বাংলাদেশী প্রবাসীবহুল দেশসমূহ এবং সমাজের বিভিন্ন পেশা থেকে প্রতিনিধির সমন্বয়ে সুনির্দিষ্ট সংস্কার প্রস্তাবনা নিয়ে অন্তর্বর্তীকালীন সরকারের হাতকে শক্তিশালী করার মাধ্যমে ন্যায্য সংস্কার সম্পাদনের দাবী আদায়ে কাজ করবো। আমরা এই বিপ্লব এবং বিপ্লবের আবু সাঈদ ও মুগ্ধদের অমর করে রাখতে চাই। তাই আমরা আগামী নির্বাচনে ভোটাধিকার নিশ্চিতে মাধ্যমে এবং নেতৃত্বের অবারিত সুযোগ তৈরির মাধ্যমে দেশের রাজনীতিতে তারুণ্যের এই প্রজন্মের অংশ গ্রহণ নিশ্চিতে আমরা প্রতিশ্রুতিবদ্ধ।
                         </p>
@@ -156,6 +157,25 @@
  </section>
 
 
+ <style>
+
+.separetion-text span{
+        font-family: 'myfont';
+        color: #f5f5f5;
+        font-weight: bold;
+        font-size: 2em;
+        display: block;
+        word-spacing: 1rem;
+        text-align: center;
+    }
+
+ </style>
+
+ <section>
+    <div class="separetion-text" style="background: green;">
+        <span class="py-3" style="">সবার উপরে দেশ এক বাংলাদেশ </span>
+    </div>
+ </section>
 
 
       <style>
@@ -227,110 +247,18 @@
         </div>
     </section>
 
+    <section>
+        <div class="separetion-text" style="background: rgb(255, 0, 0);">
+            <span class="py-3" style=""> জেগে উঠুন !  </span>
+        </div>
+     </section>
+
 
     @include('front-end.pages.home.components.fancy_button')
 
+    @include('front-end.pages.home.components.dofa')
 
-    <style>
 
-        .dofa {position: relative;}
-        .dofa::after{
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top:0;
-            /* z-index: 2; */
-          background:rgb(100 100 100 / 94%);
-        };
-
-        .dofa-rofa{
-            position: relative;
-            z-index: 999;
-        }
-
-        .dofa span {
-            color: rgb(255 255 255);
-            font-weight: bold;
-            font-family: 'myfont';
-        }
-
-        .card-1{
-            background: #ffff86;
-        }
-        .card-2 {
-            background:#31c9e9
-        }
-    </style>
-
-    <section class="dofa" style="background:url('{{asset('frontend/img/dofa-bg.png')}}')">
-
-        <div class="dofa-rofa container-fluid" style="position: relative; z-index:1">
-
-            <div class="row">
-                <div class="col-auto mx-auto">
-                    <h2 class="text-center common-section-title py-5" style="color:rgb(255, 255, 255)">  জাগো জনতার দফাসমূহ</h2>
-                </div>
-            </div>
-
-            <div class="row justify-content-center mb-5">
-                <!-- First row of 3 cards -->
-                <div class="col-auto">
-                    <div class=" custom-card card-1">
-                        <div class="d-flex justify-content-center flex-column  align-items-center">
-                        <img src="{{asset('frontend/img/dofa-img-1.png')}}" style="width:49%" alt="">
-                        <h3>প্রবাসীদের অধিকার সংস্কারে</h3>
-                        <span>১৭ দফা</span></div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="custom-card card-2">
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                        <img src="{{asset('frontend/img/dofa-img-2.png')}}" style="width:45%" alt="">
-                        <h3>ভারতের সাথে সম্পর্কের পুনঃবিন্যাস ও সংস্কারে</h3>
-                        <span>১২ দফা</span></div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="custom-card card-1">
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                            <img src="{{asset('frontend/img/dofa-img-3.png')}}" style="width:70%" alt="">
-                            <h3>৪র্থ শিল্প বিপ্লবে বাংলাদেশের অংশগ্রহণ ও এগিয়ে যাওয়ার</h3>
-                            <span>১১ দফা</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center  pb-5">
-                <!-- Second row of 3 cards -->
-                <div class="col-auto">
-                    <div class="custom-card card-2">
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                            <img src="{{asset('frontend/img/dofa-img-4.png')}}" style="width:65%" alt="">
-                        <h3>ব্লু ইকোনোমি সুনীল অর্থনীতিতে বাংলাদেশের সম্পৃক্ততা নিশ্চিতে</h3>
-                        <span>১০ দফা</span></div></div>
-                </div>
-                <div class="col-auto">
-                    <div class="custom-card card-1">
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                            <img src="{{asset('frontend/img/dofa-img-5.png')}}" style="width:70%" alt="">
-                            <h3>জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিতে</h3>
-                            <span>৭ দফা</span></div>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="custom-card card-2">
-                        <div class="d-flex justify-content-center flex-column align-items-center">
-                            <img src="{{asset('frontend/img/dofa-img-6.png')}}" style="width:66%" alt="">
-                            <h3>মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারে</h3>
-                            <span>১২ দফা</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
 
    {{-- 350 sec end  --}}
 

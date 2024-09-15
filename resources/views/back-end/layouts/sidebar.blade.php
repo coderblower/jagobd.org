@@ -63,6 +63,27 @@
                         </li>
                     </ul>
                 </li>
+
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="side-dofa">
+                        <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            Dofa Panel
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route("dofa-set.index")}}" class="nav-link" id="side-general">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dofa </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link" id="side-ratings">
                         <i class="nav-icon fa fa-cog"></i>
@@ -131,8 +152,8 @@
                                 <p>Instructors</p>
                             </a>
                         </li>
-                    </ul>                    
-                </li>    
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link" id="side-Charity">
                         <i class="nav-icon fa fa-heart"></i>
@@ -198,12 +219,12 @@
                         </li>
                     </ul>
                 </li>
-                 
+
                 <li class="nav-item">
                     <a href="{{route("breakingNews.index")}}" class="nav-link" id="side-breakingNews">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            BreakingNews 
+                            BreakingNews
                         </p>
                     </a>
                 </li>
@@ -211,7 +232,7 @@
                     <a href="{{route("notice.index")}}" class="nav-link" id="side-notice">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Notice 
+                            Notice
                         </p>
                     </a>
                 </li>
@@ -219,11 +240,11 @@
                     <a href="{{route("formPdf.index")}}" class="nav-link" id="side-formPdf">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            FormPdf 
+                            FormPdf
                         </p>
                     </a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a href="{{route("program.index")}}" class="nav-link" id="side-program">
                         <i class="nav-icon fas fa-tree"></i>
@@ -234,7 +255,7 @@
                     </a>
 
                 </li>
-                
+
                 <li class="nav-item">
                     <a href="{{route("news.index")}}" class="nav-link" id="side-news">
                         <i class="nav-icon fas fa-table"></i>
@@ -256,8 +277,8 @@
                     </a>
 
                 </li>
-                
-                
+
+
                 <li class="nav-item">
                     <a href="{{route("bnmtv.index")}}" class="nav-link" id="side-video">
                         <i class="nav-icon fas fa-chart-pie"></i>
@@ -324,7 +345,7 @@
                                 {{-- <i class="fas fa-angle-left right"></i> --}}
                             </p>
                         </a>
-    
+
                     </li>
                 <li class="nav-item">
                     <a href="{{route("position.index")}}" class="nav-link" id="side-position">

@@ -7,7 +7,8 @@
                     @if ($siteSetting)
                     <h1 class="mb-5 mt-4 contact-us-head">{{ app()->getLocale() == 'bn' ? 'বার্তা পাঠান' : 'Get in touch' }}</h1>
                 @else
-                    <p>No description available.</p>
+                    {{-- <p>No description available.</p> --}}
+                    <h1 class="mb-5 mt-4 contact-us-head">{{ app()->getLocale() == 'bn' ? 'বার্তা পাঠান' : 'Get in touch' }}</h1>
                 @endif
 
 
@@ -16,7 +17,10 @@
                         {{ app()->getLocale() == 'bn' ? Illuminate\Support\Str::limit($siteSetting->contact_description_bn, 300) : Illuminate\Support\Str::limit($siteSetting->contact_description_en, 300) }}
                     </p>
                 @else
-                    <p>No description available.</p>
+                    {{-- <p>No description available.</p> --}}
+                    {{-- <p class="mb-4">
+                        {{ app()->getLocale() == 'bn' ? Illuminate\Support\Str::limit($siteSetting->contact_description_bn, 300) : Illuminate\Support\Str::limit($siteSetting->contact_description_en, 300) }}
+                    </p> --}}
                 @endif
 
 

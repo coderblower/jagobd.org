@@ -14,6 +14,7 @@ use App\Http\Controllers\InstituteForFutureLeadersController;
 use App\Http\Controllers\CenterForHappinessController;
 use App\Http\Controllers\CenterForPoliticalController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\DofaController;
 use App\Http\Controllers\YouthParliamentController;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Course;
@@ -46,6 +47,7 @@ Route::get('party', [HomeController::class, 'party'])->name('party');
 Route::get('gallery-page', [HomeController::class, 'gallery'])->name('gallery-page');
 Route::get('donate', [HomeController::class, 'donate'])->name('donate');
 
+Route::get('/dofa', [HomeController::class, 'dofa'])->name('dofa');
 
 Route::get('constitution', [HomeController::class, 'getConstithution'])->name('constitution');
 

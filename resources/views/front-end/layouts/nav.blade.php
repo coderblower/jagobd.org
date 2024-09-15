@@ -12,6 +12,49 @@
         transform: scale(1.1);
     };
 
+    .top-nav {
+        min-height: 30px;
+    }
+
+    .top-nav button{
+        transform: translateY(33%);
+        padding: 10px 25px;
+        border-radius: 14px;
+        border: none;
+        font-family: 'myfont';
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 18px;
+        color: green;
+        background-color: #ffffff;
+        position: relative;
+        /* transition: all 1ms ease; */
+        transition: all .5s ease;
+    }
+
+
+    .fb-icon {
+    position: absolute;
+    top: 29px;
+    left: 46px;
+    transform: scale(1.2);
+    }
+
+    .top-nav button:hover{
+        transform: scale(1.1) translate(0px, 10px)
+    }
+    /* .top-nav button::after{
+        content: "";
+        width:50px;
+        height: 5px;
+        background-image:linear-gradient(180deg, transparent, rgb(191 128 128 / 38%));
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: 55; */
+
+        /* box-shadow:   0 1px 3px #666; */
+    }
 
 </style>
 
@@ -23,8 +66,30 @@
  /* border-bottom: 1px solid rgb(219, 219, 219); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
   z-index:99;">
 
-    <div class="top-nav" style="background-color: #39B44B; color:#fff">
+    <div class="top-nav" style="background-color: #ff0000; color:#fff; ">
         <div class="container">
+
+            <div class="row">
+                <div class=" offset-md-9 col-md-1" style="position: relative">
+                    <div class="fb-icon d-flex justify-content-end">
+                        @if ($siteSetting)
+                            <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
+                                class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                                    class="fab fa-facebook-f " style="color:#fff"></i></a>
+
+                        @else
+                        <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
+                        class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                            class="fab fa-facebook-f " style="color:#fff"></i></a>
+                        @endif
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button>যোগ দিন </button>
+                </div>
+                </div>
+            </div>
 
 
 {{--
@@ -132,9 +197,13 @@
     </div>
 
     <style>
+
+
       .outer {display: flex; flex-wrap: wrap}
 
         .inner {
+        padding:20px 30px;
+
         flex: 1;
         /* height: 200px; */
         width: 200px;
@@ -154,11 +223,11 @@
 
 
         <div class="row">
-            <div class="col-md-8 col-sm- mx-auto py-2">
+            <div class="col-md-12 col-sm-  py-2">
                 <div class="d-flex justify-content-between align-items-center">
                     {{-- logo --}}
 
-                      <div>
+                      <div style="flex-basis: 412px;">
                         <a href="{{ route('frontend.index') }}" class="navbar-brand">
                             <img class="logo" src="https://res.cloudinary.com/saiful/image/upload/e_improve:outdoor:60,f_auto,q_70/v1/bnm_project/fcytfhlveksqqwzhd6lc" class="img-fluid" alt="First slide"
                                 style="left:200px" />
@@ -181,22 +250,6 @@
               </div>
             </div>
 
-            <div class=" col-md-3 d-flex justify-content-around align-items-center">
-                <div class=" d-flex hightech-link justify-content-start align-items-center">
-                    <div class="">
-                        @if ($siteSetting)
-                            <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
-                                class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
-                                    class="fab fa-facebook-f " style="color:#fff"></i></a>
-
-                        @else
-                            <p>No data available.</p>
-                        @endif
-
-                    </div>
-                </div>
-                <a href="#join-us" class="join-us-button" style="border-radius: 5px; background:rgb(5 104 57); font-size:1.5em; color:#fff9ce; font-weight:bold; padding: 15px 20px;"> যোগ দিন </a>
-            </div>
         </div>
 
 

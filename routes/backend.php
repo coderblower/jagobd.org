@@ -27,6 +27,7 @@ use \App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\APIs\RatingController;
 use App\Http\Controllers\BnmtvController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\DofaController;
 use App\Http\Controllers\EnrollmentController;
 use App\Http\Controllers\InstructorController;
 use Illuminate\Support\Facades\Route;
@@ -74,6 +75,8 @@ Route::get('news_status_change',[NewsController::class,'news_status_change'])->n
 //Video route started here
 Route::resource('video',VideoController::class);
 Route::get('video_status_change',[VideoController::class,'video_status_change'])->name('video_status_change');
+
+Route::resource('dofa-set', DofaController::class);
 
 
 

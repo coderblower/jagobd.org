@@ -695,4 +695,13 @@ class HomeController extends Controller
         return view('front-end.pages.constitution.index');
     }
 
+    public function dofa(){
+
+        $siteSetting = Cache::remember('siteSetting', 60, function () {
+            return SiteSetting::first();
+        });
+
+        return view('front-end.pages.dofa.index', compact('siteSetting'));
+    }
+
 }

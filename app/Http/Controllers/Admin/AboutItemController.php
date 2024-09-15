@@ -68,6 +68,9 @@ class AboutItemController extends Controller
     // Store a newly created resource in storage
     public function store(Request $request)
     {
+
+        // dd($request);
+
         $validator = $this->validateRequest($request);
 
         if ($validator->fails()) {
