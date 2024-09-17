@@ -107,7 +107,7 @@
    </style>
 
 
-<section style="padding: 30px 0">
+<section id="amader-kotha" style="padding: 30px 0">
     <div class="container-fluid">
         <div class="row" style="">
             <div class="col-md-5 text-center amader-kotha-title d-flex justify-content-center align-items-center " style="">
@@ -184,7 +184,7 @@
         }
       </style>
 
-      <section>
+      <section id="songsker-khetro">
         <div class="360-area " style="    background: #c1ddc7;">
             <div class="container py-5">
 
@@ -198,43 +198,50 @@
 
                 <div class="row" style="margin-top:40px;">
                     <div class="col-md-6 gap d-flex justify-content-end">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
-                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
+                            <img src="{{asset('uploads-image/360/1.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 "> প্রবাসীদের অধিকার
+                                ও মর্যাদা প্রতিষ্ঠা
+
                          </div>
                     </div>
                     <div class=" col-md-6 gap d-flex justify-content-start">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="" >
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
-                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="" >
+                            <img src="{{asset('uploads-image/360/2.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">প্রতিবেশী রাষ্ট্রের আধিপত্যবাদ রোধে
+                                প্রতিটি ক্ষেত্রে সমানুপাতিক সম্পর্ক স্থাপন
                          </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top:40px;">
                     <div class=" col-md-6 gap d-flex justify-content-center">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
-                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center  pt-4" style="">
+                            <img src="{{asset('uploads-image/360/3.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">৪র্থ শিল্প বিপ্লবে তারুণ্যের
+                                সম্পৃক্ততা নিশ্চিত করণ
                          </div>
                     </div>
                     <div class=" col-md-6 gap d-flex justify-content-center">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="" >
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
-                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center  pt-4" style="" >
+                            <img src="{{asset('uploads-image/360/4.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">ব্লু ইকোনোমি বা সুনীল অর্থনীতিতে অংশিদারিত্ব নিশ্চিতে রাষ্ট্রের আন্তর্জাতিক যোগাযোগ স্থাপন
+
                          </div>
                     </div>
                 </div>
                 <div class="row" style="margin-top:40px;">
                     <div class=" col-md-6 gap d-flex justify-content-end">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
-                            <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
+                            <img src="{{asset('uploads-image/360/5.png')}}" style="width:5rem;" alt="">
+                            <p class="mb-0 py-5 px-4 ">জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিত করণ
+
                          </div>
                     </div>
                     <div class=" col-md-6 gap d-flex justify-content-start">
-                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center" style="">
-                            <img src="{{asset('frontend/img/3606.png')}}" style="width:5rem;" alt="">
+                       <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
+                            <img src="{{asset('uploads-image/360/6.png')}}" style="width:5rem;" alt="">
                             <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
+
                          </div>
                     </div>
 

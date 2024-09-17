@@ -111,6 +111,13 @@
     z-index: 999;
 }
 
+.signle-dofa{
+    transition: all .3s ease;
+}
+.signle-dofa:hover {
+    transform: scale(1.1)
+}
+
 .dofa span {
     color: rgb(255 255 255);
     font-weight: bold;
@@ -125,7 +132,7 @@
 }
 </style>
 
-<section class="dofa" style="background:url('{{asset('frontend/img/dofa-bg.png')}}')">
+<section id="" class="dofa" style="background:url('{{asset('frontend/img/dofa-bg.png')}}')">
 
 <div class="dofa-rofa container-fluid" style="position: relative; z-index:1">
 
@@ -137,57 +144,26 @@
 
     <div class="row justify-content-center mb-5">
         <!-- First row of 3 cards -->
-        <div class="col-auto">
-            <div class=" custom-card card-1">
-                <div class="d-flex justify-content-center flex-column  align-items-center">
-                <img src="{{asset('frontend/img/dofa-img-1.png')}}" style="width:49%" alt="">
-                <h3>প্রবাসীদের অধিকার সংস্কারে</h3>
-                <span>১৭ দফা</span></div>
-            </div>
-        </div>
-        <div class="col-auto">
-            <div class="custom-card card-2">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                <img src="{{asset('frontend/img/dofa-img-2.png')}}" style="width:45%" alt="">
-                <h3>ভারতের সাথে সম্পর্কের পুনঃবিন্যাস ও সংস্কারে</h3>
-                <span>১২ দফা</span></div>
-            </div>
-        </div>
-        <div class="col-auto">
-            <div class="custom-card card-1">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="{{asset('frontend/img/dofa-img-3.png')}}" style="width:70%" alt="">
-                    <h3>৪র্থ শিল্প বিপ্লবে বাংলাদেশের অংশগ্রহণ ও এগিয়ে যাওয়ার</h3>
-                    <span>১১ দফা</span></div>
-            </div>
-        </div>
-    </div>
 
-    <div class="row justify-content-center  pb-5">
-        <!-- Second row of 3 cards -->
-        <div class="col-auto">
-            <div class="custom-card card-2">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="{{asset('frontend/img/dofa-img-4.png')}}" style="width:65%" alt="">
-                <h3>ব্লু ইকোনোমি সুনীল অর্থনীতিতে বাংলাদেশের সম্পৃক্ততা নিশ্চিতে</h3>
-                <span>১০ দফা</span></div></div>
-        </div>
-        <div class="col-auto">
-            <div class="custom-card card-1">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="{{asset('frontend/img/dofa-img-5.png')}}" style="width:70%" alt="">
-                    <h3>জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিতে</h3>
-                    <span>৭ দফা</span></div>
-            </div>
-        </div>
-        <div class="col-auto">
-            <div class="custom-card card-2">
-                <div class="d-flex justify-content-center flex-column align-items-center">
-                    <img src="{{asset('frontend/img/dofa-img-6.png')}}" style="width:66%" alt="">
-                    <h3>মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারে</h3>
-                    <span>১২ দফা</span></div>
-            </div>
-        </div>
+
+        @foreach ($dofa as $key=>$item )
+
+                <div class="col-auto signle-dofa">
+                    <div class="custom-card card-2">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <a href="{{route('dofa.details', $item->id)}}">
+                                <img src="{{asset($item['image-mini'])}}" style="width:{{$item->dofa_style}}%" alt="">
+                                <h3>{{$item->title}}</h3>
+                                <span>{{$item->dofa_count}} দফা</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+        @endforeach
+
+
     </div>
 </div>
 

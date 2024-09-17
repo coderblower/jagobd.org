@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\About;
 use App\Models\AboutItem;
 use App\Models\BreakingNews;
+use App\Models\Dofa;
 use App\Models\Eshowcase;
 use App\Models\FormPdf;
 use App\Models\Gallery;
@@ -67,7 +68,12 @@ class HomeController extends Controller
                 ->orderBy('id', 'DESC')
                 ->get();
         });
-        return view('front-end.pages.home.index', compact('sliders', 'siteSetting', 'about_us','breakingNews','notice', 'formPdf', 'program', 'news','videos','partyMember'));
+
+        $dofa = Cache::remember('dofa', 60, function(){
+            return Dofa::all();
+        });
+
+        return view('front-end.pages.home.index', compact('sliders', 'siteSetting', 'about_us','breakingNews','notice', 'formPdf', 'program', 'news','videos','partyMember', 'dofa'));
     }
 
 
@@ -697,11 +703,29 @@ class HomeController extends Controller
 
     public function dofa(){
 
+        $dofa = Dofa::all();
+
         $siteSetting = Cache::remember('siteSetting', 60, function () {
             return SiteSetting::first();
         });
 
-        return view('front-end.pages.dofa.index', compact('siteSetting'));
+        return view('front-end.pages.dofa.index', compact('siteSetting', 'dofa'));
     }
+
+
+    public function dofaDetails(Dofa $dofa)
+    {
+        $siteSetting = Cache::remember('siteSetting', 60, function () {
+            return SiteSetting::first();
+        });
+
+
+        $moreDofa = Dofa::where('id', '!=', $dofa->id)->get();
+
+
+
+        return view('front-end.pages.dofa.dofaDetails', compact('siteSetting', 'dofa', 'moreDofa'));
+    }
+
 
 }

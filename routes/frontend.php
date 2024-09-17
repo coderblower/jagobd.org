@@ -48,6 +48,7 @@ Route::get('gallery-page', [HomeController::class, 'gallery'])->name('gallery-pa
 Route::get('donate', [HomeController::class, 'donate'])->name('donate');
 
 Route::get('/dofa', [HomeController::class, 'dofa'])->name('dofa');
+Route::get('/dofa-details/{dofa}', [HomeController::class, 'dofaDetails'])->name('dofa.details');
 
 Route::get('constitution', [HomeController::class, 'getConstithution'])->name('constitution');
 

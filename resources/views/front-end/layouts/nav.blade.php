@@ -3,6 +3,19 @@
 
 
 <style>
+    .outer {display: flex; flex-wrap: wrap}
+
+.inner {
+padding:20px 30px;
+
+flex: 1;
+/* height: 200px; */
+width: 200px;
+margin: 0 5px;
+/* background: blue; */
+}
+
+
 
     .join-us-button{
         transition: all .3s ease;
@@ -34,9 +47,9 @@
 
 
     .fb-icon {
-    position: absolute;
+
     top: 29px;
-    left: 46px;
+
     transform: scale(1.2);
     }
 
@@ -56,168 +69,37 @@
         /* box-shadow:   0 1px 3px #666; */
     }
 
+
+
 </style>
 
 
+<div class="top-nav" style="height:40px; background:red; position: relative;">
+    <div class="container">
 
-<!-- Navbar Start -->
-<div class="sticky"
-    style="background-color: #ffffff;
- /* border-bottom: 1px solid rgb(219, 219, 219); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
-  z-index:99;">
+        <div class="d-flex justify-content-around align-items-center" style="width:200px; float:right
+        " >
 
-    <div class="top-nav" style="background-color: #ff0000; color:#fff; ">
-        <div class="container">
 
-            <div class="row">
-                <div class=" offset-md-9 col-md-1" style="position: relative">
-                    <div class="fb-icon d-flex justify-content-end">
-                        @if ($siteSetting)
-                            <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
-                                class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
-                                    class="fab fa-facebook-f " style="color:#fff"></i></a>
 
-                        @else
-                        <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
-                        class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
-                            class="fab fa-facebook-f " style="color:#fff"></i></a>
-                        @endif
-
-                    </div>
+            <div class="fb">
+                <div class="fb-icon  ">
+                    <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
+                    class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
+                        class="fab fa-facebook-f " style="color:#fff"></i></a>
                 </div>
-                <div class="col-md-2">
-                    <button>যোগ দিন </button>
-                </div>
-                </div>
+
             </div>
-
-
-{{--
-            <script>
-                function some(gg){
-                   let crossIcon =  gg.querySelector('.cross-icon');
-                   let mainIcon = gg.querySelector('.main-icon');
-
-                   if($(crossIcon).hasClass('d-none')){
-                    $(crossIcon).removeClass('d-none');
-                    $(mainIcon).addClass('d-none');
-                   } else {
-                    $(crossIcon).addClass('d-none');
-                    $(mainIcon).removeClass('d-none');
-                   }
-
-                }
-            </script>
-
-            <div class="row" style="position: relative;">
-                <!-- Example single danger button -->
-                <div class="offset-5 col" style="">
-                    <div class="btn-group" style="position:absolute">
-                        <div type="button" class="common-mob" onclick="some(this)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                                <a href="" class="position-relative " style="">
-
-                                    <div class="" >
-                                        <i class="fa-solid fa-globe main-icon" style="color: #fff; font-size:30px"></i>
-                                        <i class="fa-solid fa-x d-none cross-icon"  style="color:white;"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="dropdown-menu">
-                            <div class="switch">
-                                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox"
-                                    {{ session()->get('locale') == 'en' ? 'checked' : '' }}>
-                                <label for="language-toggle"></label>
-                                <span class="off">EN</span>
-                                <span class="on">{{ app()->getLocale() == 'bn' ? 'বাং' : 'BN' }}</span>
-                            </div>
-                        </div>
-                      </div>
-                    <div class="btn-group" style="">
-                        <div type="button" class=" " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                                <a href="" class="position-relative animated tada infinite" style="font-size: 13px">
-                                    <i class="fa fa-phone-alt fa-2x" style="color: #2a362c"></i>
-                                    <div class="position-absolute" style="top: -7px; left: 20px">
-                                        <span><i class="fa fa-comment-dots"
-                                                style="    color: #ffffff; transform: scale(-1.2) translate(18px, 1px) rotate(45deg);"></i></span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="dropdown-menu">
-                            <div class="switch">
-                                <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox"
-                                    {{ session()->get('locale') == 'en' ? 'checked' : '' }}>
-                                <label for="language-toggle"></label>
-                                <span class="off">EN</span>
-                                <span class="on">{{ app()->getLocale() == 'bn' ? 'বাং' : 'BN' }}</span>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="btn-group" style="">
-                        <div type="button" class=" " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="https://maxst.icons8.com/vue-static/icon/popular-request/request-social-media.png" width="100px" alt="">
-                        </div>
-                        <div class="dropdown-menu">
-                            <span>কোনো প্রশ্ন আছে কি? কল করুন: +88 01716010102 +8801871006627</span>
-                        </div>
-                      </div>
-                      <div class="btn-group" style="">
-                        <div type="button" class=" " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="https://maxst.icons8.com/vue-static/icon/popular-request/request-social-media.png" width="100px" alt="">
-                        </div>
-                        <div class="dropdown-menu">
-                            <div class="d-flex hightech-link">
-                                @if ($siteSetting)
-                                    <a href="{{  "https://www.facebook.com/jagojanataparty" }}" style="background-color: #0688FF" target="blank"
-                                        class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
-                                            class="fab fa-facebook-f " style="color:#fff"></i></a>
-                                    <a href="{{ $siteSetting->twitter_url }}" target="blank"
-                                        class="btn-light nav-fill btn btn-square rounded-circle me-2" style="background-color:#000"><i class="fa-brands fa-x-twitter" style="color:#fff"></i></a>
-                                    <a href="{{ $siteSetting->instagram_url }}" target="blank"
-                                        class="btn-light nav-fill btn btn-square rounded-circle me-2" style="background-color:#B81078"><i
-                                            class="fab fa-instagram " style="color:#fff"></i></a>
-                                    <a href="{{ $siteSetting->linkedin_url }}" target="blank"
-                                        class="btn-light nav-fill btn btn-square rounded-circle me-0"><i
-                                            class="fab fa-linkedin-in text-primary"></i></a>
-                                @else
-                                    <p>No data available.</p>
-                                @endif
-
-                            </div>
-                        </div>
-                      </div>
-                </div>
-            </div> --}}
-
-
+            <div class="button">
+                <button>যোগ দিন </button>
+            </div>
         </div>
     </div>
+</div>
 
-    <style>
+<!-- Navbar Start -->
+<div class="sticky" style="background-color: #ffffff; z-index:99;">
 
-
-      .outer {display: flex; flex-wrap: wrap}
-
-        .inner {
-        padding:20px 30px;
-
-        flex: 1;
-        /* height: 200px; */
-        width: 200px;
-        margin: 0 5px;
-        /* background: blue; */
-        }
-
-        @media (max-width: 480px) {
-            .inner {
-                flex: 0 1; /* - 2 x 5px left & right margin */
-                /* width: 100px; */
-            }
-        }
-    </style>
 
     <div class="container">
 
@@ -234,7 +116,7 @@
                         </a>
                       </div>
 
-                      <div class="sub-text d-flex flex-wrap justify-content-center gap-md-4">
+                      <div class="sub-text d-flex flex-wrap justify-content-sm-start justify-content-md-start gap-md-4 gap-1">
                           <div class="inner" style="flex-basis: max-content">সংস্কার</div>
                           <div class="inner" style="flex-basis: max-content">জাতীয়তাবাদ</div>
                           <div class="inner" style="flex-basis: max-content">ইনসাফ</div>
@@ -282,6 +164,26 @@
             font-size: 20px;
         }
 
+    @media (max-width: 480px) {
+    .inner {
+        flex: 0 1; /* - 2 x 5px left & right margin */
+        /* width: 100px; */
+    }
+
+    .top-nav button {
+        padding: 1px 2px;
+    }
+}
+
+@media (max-width: 880px) {
+    .top-nav button {
+        padding: 4px 8px;
+    }
+    .logo{
+        width:150px;
+    }
+}
+
     </style>
 
     <div class="container-fluid main-nav" style="background:#f5f5f5">
@@ -297,19 +199,19 @@
 
                         <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div class="navbar-nav ms-auto mx-xl-auto p-0">
-                                <ul class="d-flex justify-content-center gap-4" style="list-style: none">
+                                <ul class="d-md-flex justify-content-center gap-4" style="list-style: none">
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact') }}</a>
+                                        <a class="nav-link-text" href="#amader-kotha" id="nav-amader-kotha" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের কথা') : __('Contact') }}</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('সংস্কারের ক্ষেত্র') : __('Reform Area') }}</a>
+                                        <a class="nav-link-text" href="#songsker-khetro" id="nav-songsker" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('সংস্কারের ক্ষেত্র') : __('Reform Area') }}</a>
                                     </li>
-                                    <li><a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের দফা') : __('Our Agenda') }}</a></li>
+                                    <li><a class="nav-link-text" href="{{ route('dofa') }}" id="nav-amader-dofa" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের দফা') : __('Our Agenda') }}</a></li>
                                     <li>
-                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('রোডম্যাপ') : __('RoadMap') }}</a>
+                                        <a class="nav-link-text" href="#road-map" id="nav-road-map" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('রোডম্যাপ') : __('RoadMap') }}</a>
                                     </li>
                                     <li>
-                                        <a class="nav-link-text" href="{{ route('contact') }}" id="contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact us') }}</a>
+                                        <a class="nav-link-text" href="{{ route('contact') }}" id="nav-contact" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('যোগাযোগ') : __('Contact us') }}</a>
                                     </li>
                                 </ul>
 
