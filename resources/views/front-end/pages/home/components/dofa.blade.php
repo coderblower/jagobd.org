@@ -142,7 +142,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center pb-5">
         <!-- First row of 3 cards -->
 
 
