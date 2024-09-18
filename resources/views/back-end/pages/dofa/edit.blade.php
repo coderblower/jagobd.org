@@ -24,45 +24,45 @@
                             <h3 class="card-title">About Items Update</h3>
                         </div>
                         <!-- /.card-header -->
+
+
+
                         <!-- form start -->
-                        <form action="{{ route('about-items.update', $about_item->id) }}" method="post"
+                        <form action="{{ route('dofa.update', $dofa->id) }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="exampleInputTitle">Name EN</label>
-                                    <input type="text" class="form-control" id="exampleInputTitle" name="name_en"
-                                        value="{{ $about_item->name_en }}">
-                                </div>
+
                                 <div class="form-group">
                                     <label for="exampleInputTitle">Name BN</label>
-                                    <input type="text" class="form-control" id="exampleInputTitle" name="name_bn"
-                                        value="{{ $about_item->name_bn }}">
+                                    <input type="text" class="form-control" id="exampleInputTitle" name="title"
+                                    value="{{ $dofa->title }}">
                                 </div>
-                                <div class="form-group" id="">
-                                    <label for="exampleInputSubtitle">Description EN</label>
-                                    <textarea class="form-control" rows="3" name="description_en" required>{{ $about_item->description_en ?? '' }}</textarea>
-                                </div>
-                                <div class="form-group" id="">
-                                    <label for="exampleInputSubtitle" >Description BN</label>
-                                    <textarea class="form-control" id="cutom" rows="3" name="description_bn" required>{{ $about_item->description_bn ?? '' }}</textarea>
-                                </div>
-                                <div>
-                                    <div class="hello" id="editor"  >
+                                <div class="form-group" id="editor">
 
-                                    </div>
-                                </div>
+                                    <textarea class="form-control" id="pp" rows="3" placeholder="">
+                                    </textarea>
 
-                                    <textarea name="" id="ss" cols="30" rows="10"></textarea>
+                                </div>
+                                <input type="hidden" name="description" id="destination" value="{{$dofa->description}}">
+
+
 
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Image</label>
+                                    <label for="exampleInputFile">Image-mini</label>
                                     <div class="input-group">
-                                        <input type="file" class="form-control" id="exampleInputFile" name="image"
-                                            value="{{ $about_item->image }}">
+                                            <input type="file" class="form-control" id="exampleInputFile" name="image-mini">
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Image-large</label>
+                                    <div class="input-group">
+                                            <input type="file" class="form-control" id="exampleInputFile" name="image-large">
+                                    </div>
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
@@ -83,12 +83,17 @@
 
 <!-- Initialize Quill editor -->
 <script>
+
+
+
+
   const quill = new Quill('#editor', {
     theme: 'snow'
   });
+  quill.root.innerHTML = '{!!$dofa->description!!}'
   quill.on('text-change', (x)=>{
-    console.log(quill.root.innerHTML)
-    $('#cutom').html(quill.root.innerHTML);
+
+    $('#destination').val(quill.root.innerHTML);
   } )
 </script>
     <script>

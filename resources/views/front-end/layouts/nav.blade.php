@@ -34,12 +34,12 @@ margin: 0 5px;
         padding: 10px 25px;
         border-radius: 14px;
         border: none;
-        font-family: 'myfont';
+        /* font-family: 'myfont'; */
         font-weight: bold;
         letter-spacing: 1px;
-        font-size: 18px;
-        color: green;
-        background-color: #ffffff;
+        font-size: 22px;
+        color: rgb(3, 3, 3);
+        background-color: #efff00;
         position: relative;
         /* transition: all 1ms ease; */
         transition: all .5s ease;
@@ -84,7 +84,7 @@ margin: 0 5px;
 
             <div class="fb">
                 <div class="fb-icon  ">
-                    <a href="{{  "https://www.facebook.com/jagojanataparty" }}"  style="background-color: #0688FF" target="blank"
+                    <a href="{{  "https://www.facebook.com/jag0janata" }}"  style="background-color: #0688FF" target="blank"
                     class="btn-light nav-fill btn btn-square rounded-circle me-2"><i
                         class="fab fa-facebook-f " style="color:#fff"></i></a>
                 </div>
@@ -159,9 +159,9 @@ margin: 0 5px;
 
         .nav-link-text {
             font-family: 'myfont';
-            color: rgb(19, 19, 19);
+            color: #e30808;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 1.7em;
         }
 
     @media (max-width: 480px) {
@@ -198,7 +198,7 @@ margin: 0 5px;
                         </button>
 
                         <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
-                            <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                            <div class="navbar-nav ms-auto mx-xl-auto p-0 pt-4">
                                 <ul class="d-md-flex justify-content-center gap-4" style="list-style: none">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link-text" href="#amader-kotha" id="nav-amader-kotha" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের কথা') : __('Contact') }}</a>

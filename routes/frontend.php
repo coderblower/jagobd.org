@@ -47,8 +47,10 @@ Route::get('party', [HomeController::class, 'party'])->name('party');
 Route::get('gallery-page', [HomeController::class, 'gallery'])->name('gallery-page');
 Route::get('donate', [HomeController::class, 'donate'])->name('donate');
 
-Route::get('/dofa', [HomeController::class, 'dofa'])->name('dofa');
+Route::get('/roadmap-page', [HomeController::class, 'roadmap'])->name('dofa');
 Route::get('/dofa-details/{dofa}', [HomeController::class, 'dofaDetails'])->name('dofa.details');
+
+Route::get('/dofa-page', [HomeController::class, 'dofa'])->name('dofa');
 
 Route::get('constitution', [HomeController::class, 'getConstithution'])->name('constitution');
 

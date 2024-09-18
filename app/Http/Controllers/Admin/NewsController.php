@@ -24,25 +24,13 @@ class NewsController extends Controller
                     ->addColumn('title_en', function ($data) {
                         return Str::limit($data->title_en, 40);
                     })
-                    ->addColumn('title_bn', function ($data) {
-                        return Str::limit($data->title_bn, 40);
-                    })
-                   
-                    ->addColumn('description_en', function ($data) {
-                        return Str::limit($data->description_en, 40);
-                    })
+
 
                     ->addColumn('description_bn', function ($data) {
                         return Str::limit($data->description_bn, 40);
                     })
-                    ->addColumn('date', function ($data) {
-                        return $data->date;
-                    })
-                    ->addColumn('image', function ($data) {
-                        return '<a target="_blank" href="' . asset($data->image) . '">
-                                   <img class="image" style="width:auto; height: 50px" src="' . asset($data->image) . '"/>
-                                </a>';
-                    })
+
+
                     ->addColumn('status', function ($data) {
                         $selected = $data->status == 1 ? 'selected' : '';
                         return "<select id='status-$data->id' onchange='StatusChange([$data->id])' class='form-control'>
@@ -72,7 +60,7 @@ class NewsController extends Controller
         }
     }
 
-    
+
     /**
      * Show the form for creating a new resource.
      */
@@ -137,7 +125,7 @@ class NewsController extends Controller
         }
     }
 
-    
+
 
     // Update the specified resource in storage
     public function update(Request $request, News $news)
@@ -152,15 +140,15 @@ class NewsController extends Controller
             'status' => 'nullable',
             'image' => 'nullable|image|max:2048', // Additional validation for image
         ]);
-    
+
         try {
             // Check if a new image file is uploaded
             $image_url = $news->image; // Default to existing image
-    
+
             if ($request->hasFile('image')) {
                 $image_url = $request->file('image')->store('images', 'public'); // Store the image in the 'public/images' directory
             }
-    
+
             // Update the News instance with the new data
             $news->update([
                 'title_en' => $request->title_en,
@@ -170,7 +158,7 @@ class NewsController extends Controller
                 'date' => $request->date,
                 'image' => $image_url,
             ]);
-    
+
             // Redirect with success message if update is successful
             return redirect()->route('news.index')->with('success', 'Updated Successfully');
         } catch (\Exception $exception) {
@@ -178,7 +166,7 @@ class NewsController extends Controller
             return redirect()->back()->with('error', $exception->getMessage());
         }
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -204,8 +192,8 @@ class NewsController extends Controller
         }
     }
 
-    // news_status_change 
-    
+    // news_status_change
+
     public function news_status_change(Request $request)
     {
         $request->validate([

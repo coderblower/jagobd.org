@@ -36,7 +36,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <a href="{{route('dofa-set.create')}}" class="btn btn-primary mb-2" style="float:right;">add dofa Items</a>
+                <a href="{{route('dofa.create')}}" class="btn btn-primary mb-2" style="float:right;">add dofa Items</a>
             </div>
             <div class="col-12">
                 <div class="card">
@@ -48,10 +48,10 @@
                         <table id="example1" class="table table-bordered table-striped data-table">
                             <thead>
                             <tr class="" style="text-align:center; ">
-                                <th style="width: 10%">SL</th>
-                                <th style="width: 10%">Title</th>
+                                <th style="width: 5%">SL</th>
+                                <th style="width: 50%">Title</th>
                                 <th style="width: 15%">Description</th>
-                                <th style="width: 10%">Action</th>
+                                <th style="width: 30%">Action</th>
                             </tr>
                             </thead>
                         </table>
@@ -89,18 +89,16 @@
             pagingType: "full_numbers",
 
             ajax: {
-                url: "{{route('dofa-set.index')}}",
+                url: "{{route('dofa.index')}}",
                 type: "get",
             },
 
             columns: [
                 {data: "DT_RowIndex", name: "DT_RowIndex", orderable: false,},
-                {data: 'title', name: 'title', orderable: true,},
-                {data: 'description', name: 'description', orderable: true,},
+                {data: 'title', name: 'title', orderable: true},
+                {data: 'description', name: 'description', orderable: true},
+                // {data: 'status', name: 'status', orderable: true},
                 {data: 'action', searchable: false, orderable: false}
-
-                //only those have manage_user permission will get access
-
             ],
         });
         // delete Confirm
@@ -121,7 +119,7 @@
         // Delete Button
         function deleteItem(id) {
 
-            var url = '{{ route("dofa-set.destroy",":id") }}';
+            var url = '{{ route("dofa.destroy",":id") }}';
             $.ajax({
                 type: "DELETE",
                 url: url.replace(':id', id),

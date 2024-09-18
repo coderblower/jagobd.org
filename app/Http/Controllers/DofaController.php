@@ -6,6 +6,9 @@ use App\Models\Dofa;
 use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
+use DataTables;
+
 
 class DofaController extends Controller
 {
@@ -20,35 +23,37 @@ class DofaController extends Controller
         try {
             // Check if the request is an AJAX request
 
+            if ($request->ajax()) {
                 $data = Dofa::orderBy('id', 'DESC')->get();
-                $x = DataTables::of($data)
+                return DataTables::of($data)
                     ->addIndexColumn()
-
                     ->addColumn('title', function ($data) {
-                       return Str::limit($data->title, 40);
-                   })
+                        return Str::limit($data->title, 40);
+                    })
+
+
                     ->addColumn('description', function ($data) {
                         return Str::limit($data->description, 40);
                     })
 
+
+
                     ->addColumn('action', function ($data) {
                         return '<div role="group">
-                                    <a href="' . route('about-items.show', $data->id) . '" class="btn btn-sm btn-info" title="View">
+                                    <a href="' . route('dofa.show', $data->id) . '" class="btn btn-sm btn-info" title="View">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a href="' . route('about-items.edit', $data->id) . '" class="btn btn-sm btn-success" title="Edit">
+                                    <a href="' . route('dofa.edit', $data->id) . '" class="btn btn-sm btn-success" title="Edit">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                    <a href="' . route('about-items.destroy', $data->id) . '" class="btn btn-sm btn-danger" onclick="showDeleteConfirm(' . $data->id . ')" title="Delete">
+                                    <a href="' . route('dofa.destroy', $data->id) . '" class="btn btn-sm btn-danger" onclick="showDeleteConfirm(' . $data->id . ')" title="Delete">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </div>';
                     })
-                    ->rawColumns(['id', 'title','description', 'action'])
+                    ->rawColumns(['title','description','action'])
                     ->make(true);
-
-                    dd($x);
-                    return $x;
+            }
 
             return view('back-end.pages.dofa.index');
         } catch (\Exception $exception) {
@@ -84,8 +89,8 @@ class DofaController extends Controller
 
 
 
-            $image_url = $request->hasFile('image-mini') ? $this->uploadImage($request->file('image-mini'), $data) : self::DEFAULT_IMAGE_URL;
-            $image_url_1 = $request->hasFile('image-large') ? $this->uploadImage($request->file('image-large'), $data) : self::DEFAULT_IMAGE_URL;
+            $image_url = $request->hasFile('image-mini') ? $this->uploadImage($request->file('image-mini'), $data, 'image-mini') : self::DEFAULT_IMAGE_URL;
+            $image_url_1 = $request->hasFile('image-large') ? $this->uploadImage($request->file('image-large'), $data,  'image-large') : self::DEFAULT_IMAGE_URL;
 
             $data['image-mini'] = $image_url;
             $data['image-large'] = $image_url_1;
@@ -93,7 +98,7 @@ class DofaController extends Controller
 
 
 
-            return redirect()->route('about-items.index')->with('success', 'Added Successfully');
+            return redirect()->route('dofa.index')->with('success', 'Added Successfully');
         } catch (\Exception $exception) {
             return redirect()->back()->with('error', $exception->getMessage());
         }
@@ -104,7 +109,11 @@ class DofaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        try {
+            return view('back-end.pages.news.show', compact('news'));
+        } catch (\Exception $exception) {
+            return back()->with($exception->getMessage());
+        }
     }
 
     /**
@@ -112,29 +121,74 @@ class DofaController extends Controller
      */
     public function edit(Dofa $dofa)
     {
-        return view('back-end.pages.dofa.edit', compact('dofa'));
+
+
+
+        try {
+            return view('back-end.pages.dofa.edit', compact('dofa'));
+        } catch (\Exception $exception) {
+            return back()->with('error', $exception->getMessage());
+        }
+
+
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Dofa $dofa)
     {
-        //
+
+
+        try {
+            // Check if a new image file is uploaded
+            $image_mini_url = $dofa['image-mini']; // Default to existing image
+            $image_large_url = $dofa['image-large'];
+
+            if ($request->hasFile('image-mini')) {
+                $image_mini_url =  $this->uploadImage($request->file('image-mini'), $dofa, 'image-mini');  // Store the image in the 'public/images' directory
+            }
+            if ($request->hasFile('image-large')) {
+                $image_large_url =  $this->uploadImage($request->file('image-large'), $dofa, 'image-large');  // Store the image in the 'public/images' directory
+            }
+
+            // Update the News instance with the new data
+            $dofa->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'image-mini' => $image_mini_url,
+                'image-large' => $image_large_url,
+            ]);
+
+
+
+            // Redirect with success message if update is successful
+            return redirect()->route('dofa.index')->with('success', 'Updated Successfully');
+        } catch (\Exception $exception) {
+            // Redirect back with error message if any exception occurs
+            return redirect()->back()->with('error', $exception->getMessage());
+        }
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Dofa $dofa)
     {
-        //
+        try {
+            $dofa->delete();
+            return redirect()->route('dofa.index')->with('success', 'Deleted Successfully');
+        } catch (\Exception $e) {
+            return back()->with('error', $exception->getMessage());
+        }
     }
 
-    private function uploadImage($image, $data)
+    private function uploadImage($image, $data, $names)
     {
         $name = join('_', explode(" ", $data->title));
-        $imageName = $name .'_'. $data->id.'.' . $image->getClientOriginalExtension();
+        $imageName = $name . '_'.$names.'_'. $data->id.'.' . $image->getClientOriginalExtension();
         $destinationPath = public_path('uploads-image/dofa');
         $image->move($destinationPath, $imageName);
         return 'uploads-image/dofa/' . $imageName;

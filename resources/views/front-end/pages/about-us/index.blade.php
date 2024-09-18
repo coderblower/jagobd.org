@@ -205,7 +205,7 @@
             }
 
             /* The actual timeline (the vertical ruler) */
-.main-timeline {
+            .main-timeline {
   position: relative;
 }
 

@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="row" style="margin-top:40px;">
-                    <div class="col-md-6 gap d-flex justify-content-end">
+                    <div class="col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
                             <img src="{{asset('uploads-image/360/1.png')}}" style="width:5rem;" alt="">
                             <p class="mb-0 py-5 px-4 "> প্রবাসীদের অধিকার
@@ -205,7 +205,7 @@
 
                          </div>
                     </div>
-                    <div class=" col-md-6 gap d-flex justify-content-start">
+                    <div class=" col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="" >
                             <img src="{{asset('uploads-image/360/2.png')}}" style="width:5rem;" alt="">
                             <p class="mb-0 py-5 px-4 ">প্রতিবেশী রাষ্ট্রের আধিপত্যবাদ রোধে
@@ -230,14 +230,14 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top:40px;">
-                    <div class=" col-md-6 gap d-flex justify-content-end">
+                    <div class=" col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
                             <img src="{{asset('uploads-image/360/5.png')}}" style="width:5rem;" alt="">
                             <p class="mb-0 py-5 px-4 ">জুলুমের শিকার সশস্ত্র বাহিনী, পুলিশ, প্রশাসনিক কর্মকর্তা ও আইনজীবিদের ন্যায্যতা নিশ্চিত করণ
 
                          </div>
                     </div>
-                    <div class=" col-md-6 gap d-flex justify-content-start">
+                    <div class=" col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
                             <img src="{{asset('uploads-image/360/6.png')}}" style="width:5rem;" alt="">
                             <p class="mb-0 py-5 px-4 ">মাদরাসা ও মসজিদ সংশ্লিষ্ট সকল পেশাজীবীর অধিকার নিশ্চিত করণ ও উপযুক্ত সংস্কারের মাধ্যমে বৃহত্তর কল্যান সাধন
@@ -264,6 +264,7 @@
     @include('front-end.pages.home.components.fancy_button')
 
     @include('front-end.pages.home.components.dofa')
+    @include('front-end.pages.home.components.roadmap')
 
 
 

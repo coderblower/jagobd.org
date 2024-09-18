@@ -75,7 +75,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route("dofa-set.index")}}" class="nav-link" id="side-general">
+                            <a href="{{route("dofa.index")}}" class="nav-link" id="side-general">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Dofa </p>
                             </a>

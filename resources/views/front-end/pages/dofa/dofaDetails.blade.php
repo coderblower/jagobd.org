@@ -26,7 +26,7 @@
         .dofa-header-img {
 
             background-position: center;
-            background-size: 100% 250px;
+            background-size: cover;
         }
 
         .ql-align-justify span{
@@ -34,7 +34,7 @@
         }
 
     </style>
-    <div class="dofa-header-img" style="wdith:100%; height:250px">
+    <div class="dofa-header-img" style="wdith:100%; height:300px">
 
     </div>
 
@@ -44,6 +44,11 @@
         }
         .onnanno:hover{
             transform: scale(1.1)
+        }
+        ol {
+            list-style:bengali;
+            font-size: 1.5em;
+            color:black;
         }
     </style>
 

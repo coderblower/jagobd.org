@@ -25,7 +25,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="{{route('dofa-set.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('dofa.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="card-body">

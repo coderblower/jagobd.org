@@ -24,6 +24,9 @@
                             <h3 class="card-title">division Update</h3>
                         </div>
                         <!-- /.card-header -->
+
+
+
                         <!-- form start -->
                         <form action="{{route('division.update', $division->id)}}" method="post" enctype="multipart/form-data">
                             @csrf

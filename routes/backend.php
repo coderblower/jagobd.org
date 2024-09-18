@@ -76,7 +76,7 @@ Route::get('news_status_change',[NewsController::class,'news_status_change'])->n
 Route::resource('video',VideoController::class);
 Route::get('video_status_change',[VideoController::class,'video_status_change'])->name('video_status_change');
 
-Route::resource('dofa-set', DofaController::class);
+Route::resource('dofa', DofaController::class);
 
 
 

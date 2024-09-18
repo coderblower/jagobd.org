@@ -1,21 +1,14 @@
 @extends('front-end.layouts.master')
-@section('title', 'Contact Us')
+@section('title', 'Home')
 @section('content')
-    <!-- Page Header Start -->
 
-    <hr>
-    <hr>
-<hr><hr><hr><hr> <hr><hr>
-
-     <!-- Contact Start -->
-     @include('front-end.pages.home.components.contact')
-     <!-- Contact End -->
-
+@include('front-end.pages.home.components.contact')
     <!-- Contact End -->
+@endsection
 @section('js')
     <script>
         $(document).ready(function() {
-            $("#contact").addClass('active');
+            $("#home").addClass('active');
         });
     </script>
 @endsection
