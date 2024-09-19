@@ -45,9 +45,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/backend.php'));
         });
 
-        Route::bind('dofa-details', function($value) {
-            return Dofa::where('id', $value)->orWhere('slug', $value)->first();
-         });
+
 
     }
 }
