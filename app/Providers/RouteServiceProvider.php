@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Dofa;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -43,5 +44,10 @@ class RouteServiceProvider extends ServiceProvider
 //                ->prefix('admin')
                 ->group(base_path('routes/backend.php'));
         });
+
+        Route::bind('dofa-details', function($value) {
+            return Dofa::where('id', $value)->orWhere('slug', $value)->first();
+         });
+
     }
 }

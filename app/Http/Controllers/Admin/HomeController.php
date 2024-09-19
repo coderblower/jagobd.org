@@ -713,12 +713,13 @@ class HomeController extends Controller
     }
 
 
-    public function dofaDetails(Dofa $dofa)
+    public function dofaDetails($slug)
     {
         $siteSetting = Cache::remember('siteSetting', 60, function () {
             return SiteSetting::first();
         });
 
+        $dofa = Dofa::where('id', $slug)->orWhere('slug', $slug)->first();
 
         $moreDofa = Dofa::where('id', '!=', $dofa->id)->get();
 

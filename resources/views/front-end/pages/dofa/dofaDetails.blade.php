@@ -91,7 +91,7 @@
                         " style="font-size:2rem ">অন্যান্য দফাসমূহ</h2>
                         @foreach ($moreDofa as $key=>$item )
                             <div class="card onnanno p-4 d-flex  flex-column justify-content-center align-items-center mb-4">
-                                <a href="{{route('dofa.details', $item->id)}}">
+                                <a href="{{route('dofa.details', $item->slug)}}">
                                     <div class="" style="width:100%; position: relative" >
                                         <img src="{{asset($item['image-mini'])}}" style="width:100%"  alt="">
                                     </div>

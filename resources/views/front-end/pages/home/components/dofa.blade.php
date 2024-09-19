@@ -151,7 +151,7 @@
                 <div class="col-auto signle-dofa">
                     <div class="custom-card card-2">
                         <div class="d-flex justify-content-center flex-column align-items-center">
-                            <a href="{{route('dofa.details', $item->id)}}">
+                            <a href="{{route('dofa.details', $item->slug)}}">
                                 <img src="{{asset($item['image-mini'])}}" style="width:{{$item->dofa_style}}%" alt="">
                                 <h3>{{$item->title}}</h3>
                                 <span>{{$item->dofa_count}} দফা</span>
