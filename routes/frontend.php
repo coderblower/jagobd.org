@@ -166,6 +166,8 @@ Route::get('/cart', [CartController::class, 'view'])->name('cart.view');
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 
+Route::get('/checkout2', [CheckoutController::class, 'index2'])->name('checkout2');
+
 
 
 Route::post('pay-now',[CheckoutController::class,'getSession'])->name('pay_stripe');

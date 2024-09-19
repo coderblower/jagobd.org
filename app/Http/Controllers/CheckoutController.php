@@ -21,6 +21,24 @@ class CheckoutController extends Controller
         return view('exampleEasycheckout', compact('sessionData', 'cartItems'));
     }
 
+
+    public function index2()
+    {
+
+        $sessionData = session()->all();
+        $cartItems = session()->get('cart', []);
+                $total = 0;
+                $deliveryCharge = 50; // Delivery charge in Taka
+                foreach ($cartItems as $item) {
+                    $total += $item['price'];
+                }
+                $finalTotal = $total + $deliveryCharge;
+                session()->put('total_price', $finalTotal);
+
+        return view('exampleEasycheckout2', compact('sessionData', 'cartItems'));
+    }
+
+
     public function getSession(Request $request)
     {
 
