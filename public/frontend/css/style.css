@@ -178,7 +178,8 @@
 .custom-carousel .carousel-item img {
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Responsive adjustments */
@@ -197,6 +198,11 @@
 @media (max-width: 768px) {
     .custom-carousel .carousel-item {
         height: 20rem; /* Adjust height for extra small screens */
+    }
+}
+@media (max-width: 576px) {
+    .custom-carousel .carousel-item {
+        height: 50vh; /* Take up 50% of the viewport height */
     }
 }
 
