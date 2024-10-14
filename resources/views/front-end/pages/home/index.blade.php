@@ -315,7 +315,7 @@
     @include('front-end.pages.home.components.fancy_button')
 
     @include('front-end.pages.home.components.dofa')
-    @include('front-end.pages.home.components.roadmap')
+    {{-- @include('front-end.pages.home.components.roadmap') --}}
 
 
 
