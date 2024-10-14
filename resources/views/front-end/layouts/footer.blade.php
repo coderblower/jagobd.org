@@ -14,7 +14,7 @@
 
 <div class=" footer bg-dark">
     <div class="container pt-4 pb-3">
-        <div class="row py-4" >
+        <div class="" >
             {{-- <div class="col-md-5">
                 @if ($siteSetting)
                     <a href="{{ route('frontend.index') }}" class="navbar-brand d-flex align-items-center">

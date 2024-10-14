@@ -104,13 +104,19 @@
     .amader-kotha p {
         font-size: 1em;
     }
+
+    @media (max-width: 880px) {
+        .common-section-title{
+            padding: 14px 0 !important;
+        }
+    }
    </style>
 
 
 <section id="amader-kotha" style="padding: 30px 0">
     <div class="container-fluid">
         <div class="row" style="">
-            <div class="col-md-5 text-center amader-kotha-title d-flex justify-content-center align-items-center " style="">
+            <div class="col-md-5 text-center amader-kotha-title d-md-flex justify-content-center align-items-center " style="">
                 <img src="{{asset('frontend/img/banner-main-1.jpg')}}" alt="" style="max-width: 70%">
              </div>
              <div class="col-md-7 text-center d-flex justify-content-center  " style="">
@@ -182,6 +188,51 @@
         .deg-card{
             width:25rem;
         }
+        /* Mobile first styling */
+#songsker-khetro .deg-card img {
+    width: 3rem; /* Make images smaller on mobile */
+}
+
+#songsker-khetro .deg-card p {
+    padding: 2rem 1rem; /* Reduce padding */
+}
+
+.margin-top{
+    margin-top: 40px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #songsker-khetro .container {
+        padding: 1.5rem 1rem; /* Reduce overall container padding */
+    }
+
+    #songsker-khetro .common-section-title {
+        font-size: 1.5rem; /* Reduce title font size */
+    }
+
+    #songsker-khetro .deg-card {
+        width: 90%; /* Ensure the cards take up more space on small screens */
+        margin-bottom: 20px; /* Add spacing between the cards */
+    }
+
+
+    /* Stack cards vertically */
+    #songsker-khetro .row > .col-md-6 {
+        margin-top:20px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Center the cards */
+    #songsker-khetro .deg-card {
+        margin: 0 auto;
+    }
+    .margin-top{
+    margin-top: 0px;
+}
+}
+
       </style>
 
       <section id="songsker-khetro">
@@ -196,7 +247,7 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top:40px;">
+                <div class="row margin-top" style="">
                     <div class="col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
                             <img src="{{asset('uploads-image/360/1.png')}}" style="width:5rem;" alt="">
@@ -213,7 +264,7 @@
                          </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top:40px;">
+                <div class="row margin-top" style="">
                     <div class=" col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center  pt-4" style="">
                             <img src="{{asset('uploads-image/360/3.png')}}" style="width:5rem;" alt="">
@@ -229,7 +280,7 @@
                          </div>
                     </div>
                 </div>
-                <div class="row" style="margin-top:40px;">
+                <div class="row margin-top" style="">
                     <div class=" col-md-6 gap d-flex justify-content-center">
                        <div class="  card deg-card d-flex justify-content-center flex-column align-items-center pt-4" style="">
                             <img src="{{asset('uploads-image/360/5.png')}}" style="width:5rem;" alt="">

@@ -67,7 +67,31 @@ margin: 0 5px;
         z-index: 55; */
 
         /* box-shadow:   0 1px 3px #666; */
+    /* } */
+
+    .inner {
+        flex-basis: max-content
     }
+
+    @media (max-width: 500px) {
+        .sub-text {
+            width: 400px;
+        }
+        .inner{
+            flex-basis: 148px
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header-content{
+            flex-direction: column;
+            gap: 14px;
+            padding: 18px 0;
+        }
+    }
+
+
+
 
 
 
@@ -101,15 +125,15 @@ margin: 0 5px;
 <div class="sticky" style="background-color: #ffffff; z-index:99;">
 
 
-    <div class="container">
+    <div class="">
 
 
-        <div class="row">
-            <div class="col-md-12 col-sm-  py-2">
-                <div class="d-flex justify-content-between align-items-center">
+        <div class="">
+            <div class="col-md-12 col-12  py-2 d-flex justify-content-center">
+                <div class="d-flex justify-content-between align-items-center header-content">
                     {{-- logo --}}
 
-                      <div style="flex-basis: 412px;">
+                      <div class="logo-parent">
                         <a href="{{ route('frontend.index') }}" class="navbar-brand">
                             <img class="logo" src="https://res.cloudinary.com/saiful/image/upload/e_improve:outdoor:60,f_auto,q_70/v1/bnm_project/fcytfhlveksqqwzhd6lc" class="img-fluid" alt="First slide"
                                 style="left:200px" />
@@ -117,10 +141,10 @@ margin: 0 5px;
                       </div>
 
                       <div class="sub-text d-flex flex-wrap justify-content-sm-start justify-content-md-start gap-md-4 gap-1">
-                          <div class="inner" style="flex-basis: max-content">সংস্কার</div>
-                          <div class="inner" style="flex-basis: max-content">জাতীয়তাবাদ</div>
-                          <div class="inner" style="flex-basis: max-content">ইনসাফ</div>
-                          <div class="inner" style="flex-basis: max-content">প্রযুক্তি ও প্রগতি</div>
+                          <div class="inner" style="">সংস্কার</div>
+                          <div class="inner" style="">জাতীয়তাবাদ</div>
+                          <div class="inner" style="">ইনসাফ</div>
+                          <div class="inner" style="">প্রযুক্তি ও প্রগতি</div>
                       </div>
 
 
@@ -163,17 +187,18 @@ margin: 0 5px;
             font-weight: bold;
             font-size: 1.7em;
         }
+        .navbar{
+            justify-content: end;
+            margin-top: 11px;
+        }
+
 
     @media (max-width: 480px) {
-    .inner {
-        flex: 0 1; /* - 2 x 5px left & right margin */
-        /* width: 100px; */
-    }
 
-    .top-nav button {
-        padding: 1px 2px;
+        .top-nav button {
+            padding: 1px 2px;
+            }
     }
-}
 
 @media (max-width: 880px) {
     .top-nav button {
@@ -183,7 +208,14 @@ margin: 0 5px;
         width:150px;
     }
 }
+@media (min-width: 991px) {
+    .menu-ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
+}
     </style>
 
     <div class="container-fluid main-nav" style="background:#f5f5f5">
@@ -199,7 +231,7 @@ margin: 0 5px;
 
                         <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                             <div class="navbar-nav ms-auto mx-xl-auto p-0 pt-4">
-                                <ul class="d-md-flex justify-content-center gap-4" style="list-style: none">
+                                <ul class="menu-ul" style="list-style: none">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link-text" href="#amader-kotha" id="nav-amader-kotha" class="nav-item nav-link">{{ app()->getLocale() == 'bn' ? __('আমাদের কথা') : __('Contact') }}</a>
                                     </li>
