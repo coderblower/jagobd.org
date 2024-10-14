@@ -115,7 +115,7 @@
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <span class="text-light">Designed & Developed by <a href="https://versatilo.group"
-                        class="text-primary">Versatilo Group</a></span>
+                        class="text-primary">@DK</a></span>
             </div>
         </div>
     </div>
